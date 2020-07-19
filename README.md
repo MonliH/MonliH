@@ -1,4 +1,4 @@
-![Hello](assets/banner.gif)
+![Hello](https://github.com/MonliH/MonliH/raw/master/assets/banner.gif)
 
 <!--
 ### Hi there 👋

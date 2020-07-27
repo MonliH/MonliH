@@ -1,6 +1,7 @@
-![Hello](https://github.com/MonliH/MonliH/raw/master/assets/banner.gif)
+### Hi
 
-<!--
+<!--![Hello](https://github.com/MonliH/MonliH/raw/master/assets/banner.gif)
+
 ### Hi there 👋
 
 **MonliH/MonliH** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.

@@ -9,6 +9,4 @@
   * 📖 [`rust-lang/cargo#8767`](https://github.com/rust-lang/cargo/pull/8767), [`rust-lang/rustfmt#4464`](https://github.com/rust-lang/rustfmt/pull/4464), [`serenity-rs/serenity#1030`](https://github.com/serenity-rs/serenity/pull/1030), [`hecrj/iced#545`](https://github.com/hecrj/iced/pull/545) Various documentation contributions for notable projects
 -->
 
-## Hi 👋
-
-Sometimes, I write code.
+Hi, I'm Jonathan. Sometimes, I write code.

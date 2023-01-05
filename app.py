@@ -70,7 +70,7 @@ def get_svg(r: int, c: int):
 
     return ">".join(piece_svg)
 
-@app.get("/render-grid")
+@app.get("/render-grid/{r}/{c}")
 async def render(r: int, c: int):
     svg = get_svg(r, c)
     return Response(content=svg, media_type="image/svg+xml", headers=no_cache_headers)

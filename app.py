@@ -43,7 +43,7 @@ async def click(r: int, c: int):
         active_square = None
         piece_legal_moves = None
 
-    return RedirectResponse("http://chess.jonat.li/")
+    return RedirectResponse("http://localhost:8000/")
 
 def get_svg(r: int, c: int):
     sq = chess.square(c, 7-r)
@@ -80,11 +80,13 @@ async def render():
     # display played moves
     moves = list(filter(bool, split_pgn.split(base_board.variation_san(board.move_stack))))
     # chunk moves into pairs
-    moves = [" ".join(moves[i:i+2]) for i in range(0, len(moves), 2)][-10:]
-    moves = "\n".join((f"""<text x="0" y="{i*19 + 18+32}" style="font:18px sans-serif;">{move}</text>""" for i, move in enumerate(moves)))
+    moves = [" ".join(moves[i:i+2]) for i in range(0, len(moves), 2)][-6:]
+    moves = "\n".join((f"""<text x="6" y="{i*19 + 18+32}" style="font:18px sans-serif;">{move}</text>""" for i, move in enumerate(moves)))
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" baseProfile="tiny">\
-<text x="0" y="24" style="font:bold 24px sans-serif;">Moves so far:</text>\
-{moves}</svg>"""
+<rect width="200" height="1000" style="fill: rgba(255,255,255);" rx="5" ry="5" />\
+<text x="6" y="24" style="font:bold 24px sans-serif;">Moves so far:</text>\
+{moves}\
+</svg>"""
     return Response(content=svg, media_type="image/svg+xml", headers=no_cache_headers)
 
 @app.get("/reset-board")
@@ -94,7 +96,7 @@ async def reset():
     active_square = None
     piece_legal_moves = None
     last_move = None
-    return RedirectResponse("http://chess.jonat.li/")
+    return RedirectResponse("http://localhost:8000/")
 
 @app.get("/render-reset")
 async def render_reset():

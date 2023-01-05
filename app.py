@@ -14,6 +14,8 @@ last_move = None
 
 split_pgn = re.compile(r"\s*(\d+\.)\s*")
 
+no_cache_headers = {"Cache-Control": "no-cache,no-store,must-revalidate","expires": "0","pragma": "no-cache"}
+
 @app.get("/click-grid")
 async def click(r: int, c: int):
     global active_square, piece_legal_moves, last_move
@@ -83,7 +85,7 @@ async def render():
     svg = f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" baseProfile="tiny">\
 <text x="0" y="24" style="font:bold 24px sans-serif;">Moves so far:</text>\
 {moves}</svg>"""
-    return Response(content=svg, media_type="image/svg+xml")
+    return Response(content=svg, media_type="image/svg+xml", headers=no_cache_headers)
 
 @app.get("/reset-board")
 async def reset():
@@ -100,7 +102,7 @@ async def render_reset():
 <rect width="200" height="40" style="fill: rgb(255, 33, 33);" ry="5" rx="5"/>\
 <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" style="font:bold 15px sans-serif;fill:white;">Reset</text>\
 </svg>"""
-    return Response(content=svg, media_type="image/svg+xml")
+    return Response(content=svg, media_type="image/svg+xml", headers=no_cache_headers)
 
 @app.get("/")
 async def root():

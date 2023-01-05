@@ -73,7 +73,7 @@ def get_svg(r: int, c: int):
 @app.get("/render-grid")
 async def render(r: int, c: int):
     svg = get_svg(r, c)
-    return Response(content=svg, media_type="image/svg+xml")
+    return Response(content=svg, media_type="image/svg+xml", headers=no_cache_headers)
 
 @app.get("/render-moves")
 async def render():

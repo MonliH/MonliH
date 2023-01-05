@@ -43,7 +43,7 @@ async def click(r: int, c: int):
         active_square = None
         piece_legal_moves = None
 
-    return RedirectResponse("http://chess.jonat.li/")
+    return RedirectResponse("https://github.com/MonliH")
 
 def get_svg(r: int, c: int):
     sq = chess.square(c, 7-r)
@@ -96,7 +96,7 @@ async def reset():
     active_square = None
     piece_legal_moves = None
     last_move = None
-    return RedirectResponse("http://chess.jonat.li/")
+    return RedirectResponse("https://github.com/MonliH")
 
 @app.get("/render-reset")
 async def render_reset():

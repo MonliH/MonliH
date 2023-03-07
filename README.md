@@ -1,3 +1,3 @@
-![visitors](https://visitor-badge.glitch.me/badge?page_id=monlih.monlih)
+![Viewers](https://img.shields.io/endpoint?color=blue&label=viewers&url=https%3A%2F%2Fhits.dwyl.com%2Fmonlih%2Fmonlih.json)
 
 Hi, I'm Jonathan.

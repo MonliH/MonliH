@@ -1,3 +1,3 @@
-![Viewers](https://hits.dwyl.com/monlih/monlih.svg?style=flat-square)
+[![Viewers](https://hits.sh/github.com/monlih/monlih.svg?label=vistors)](https://hits.sh/github.com/monlih/monlih/)
 
 Hi, I'm Jonathan.
